@@ -1,0 +1,6 @@
+{
+  "PORT": 5000,
+  "APPLICATION_NAME": "RELATIONSHIP",
+  "DB_URL": "mongodb+srv://root:root@cluster0-n1txv.mongodb.net/node-mosh?retryWrites=true&w=majority",
+  "JWT_SECRET": "Rooma"
+}
