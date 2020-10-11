@@ -35,7 +35,7 @@ const setup = function () {
 
 describe("test generateAuthToken function", () => {
   beforeEach(() => {
-    server = require("../../../server");
+    server = require("../../server");
   });
   afterEach(async () => {
     await server.close();
