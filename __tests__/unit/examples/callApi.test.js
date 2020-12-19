@@ -1,5 +1,5 @@
 const fetch = require("node-fetch");
-const getCats = require("../../startup/callApi.js");
+const getCats = require("../../../startup/callApi");
 
 const mockResponse = {
   breeds: [],
