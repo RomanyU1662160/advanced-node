@@ -22,6 +22,7 @@ describe(" authMiddleware tests ", () => {
       .set("x-auth-token", token);
     expect(res.status).toBe(400);
   });
+
   it("return 200 error when token is correct", async () => {
     const token = new User().generateAuthToken();
     console.log("token in auth  ::>>>", token);
