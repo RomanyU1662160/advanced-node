@@ -1,4 +1,9 @@
-const { registerUser, users } = require("../../startup/user");
+const registerUser = (user) => {
+  if (!user) {
+    throw new Error();
+  }
+  return { id: 4, name: "user4", email: "test@test.com" };
+};
 
 describe(" test exceptions", () => {
   it("throw error exception when name is not provided", () => {
