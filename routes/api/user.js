@@ -74,4 +74,11 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.post("/gettoken", async (req, res) => {
+  let user = new User();
+  let token = user.generateAuthToken();
+  console.log('token:::->>>', token);
+  res.send(token);
+})
+
 module.exports = router;

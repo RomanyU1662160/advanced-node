@@ -28,10 +28,10 @@ const FilmSchema = mongoose.Schema({
     max: 255
   },
 
-  director: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "director"
-  },
+  // director: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: "director"
+  // },
   genre: {
     type: GenreSchema,
     required: true
