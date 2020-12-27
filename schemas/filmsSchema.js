@@ -7,35 +7,35 @@ const FilmSchema = mongoose.Schema({
     required: true,
     trim: true,
     minLength: 3,
-    maxLength: 150
+    maxLength: 150,
   },
   year: {
     type: Number,
     required: true,
     min: 1900,
-    max: Date.now().year
+    max: Date.now().year,
   },
   numberInStock: {
     type: Number,
     required: true,
     min: 0,
-    max: 255
+    max: 255,
   },
   dailyRental: {
     type: Number,
     required: true,
     min: 0,
-    max: 255
+    max: 255,
   },
 
   director: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "director"
+    ref: "director",
   },
   genre: {
     type: GenreSchema,
-    required: true
-  }
+    required: false,
+  },
 });
 
 module.exports = FilmSchema;

@@ -1,6 +1,6 @@
 {
     "PORT": 3000,
-    "APPLICATION_NAME": "RELATIONSHIP",
+    "APPLICATION_NAME": "RELATIONSHIP-TEST",
     "DB_URL": "mongodb+srv://root:root@cluster0-n1txv.mongodb.net/node-mosh?retryWrites=true&w=majority",
     "JWT_SECRET": "Rooma"
 }
