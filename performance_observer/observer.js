@@ -16,15 +16,22 @@ const wrapped = performance.timerify(incrementArray);
 // A PerformanceObserver must be subscribed to the 'function' event type in order for the timing details to be accessed
 
 const obs = new PerformanceObserver((list) => {
+  performance.mark('start');
   console.log(
     'list.getEntries[0].duration ::>>>',
+
     list.getEntries()[0].duration
   );
   console.log(
     'list.getEntries()[0].startTime ::>>>',
     list.getEntries()[0].startTime
   );
+  console.log(
+    'Duration ::>>>',
+    performance.now() - list.getEntries()[0].startTime
+  );
   obs.disconnect();
+  performance.mark('end');
 });
 
 obs.observe({ entryTypes: ['function'] });
