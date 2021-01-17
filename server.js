@@ -5,6 +5,7 @@ const connectDb = require("./config/dbConnection");
 const morgan = require("morgan");
 const logger = require("./config/winston");
 const routes = require("./startup/routes"); //(app)
+const doProduction = require("./startup/prod"); //(app)
 const notifier = require("node-notifier");
 const path = require("path");
 require("express-async-errors");
@@ -28,6 +29,7 @@ app.use(express.json());
 app.use(urlencoded({ extended: false }));
 
 routes(app);
+doProduction(app);
 app.use(morgan("combined", { stream: logger.stream }));
 
 const server = app.listen(port, () => {
